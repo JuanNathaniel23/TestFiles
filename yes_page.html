@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lulu Choppa</title>
+    <link rel="stylesheet" href="./yes_style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header_text">YAAAYYY!!!! I love you so much let's spend the day together hehe mwmwaaa</h1>
+        <div class="gif_container">
+            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2U1N2d5c21qNHMzeHptdWhoZ2RmMWd0cXl3dnN0cjI4MmdjN2prZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cBncDNrdxga2I/giphy.gif">
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener("load", function() {
+            let audio = document.createElement("audio");
+            audio.src = "BOOMSKIRI.mp3"; // Same audio file
+            audio.loop = true;
+            document.body.appendChild(audio);
+    
+            let savedTime = localStorage.getItem("audioTime");
+            let isPlaying = localStorage.getItem("isPlaying") === "true";
+    
+            if (savedTime) {
+                audio.currentTime = parseFloat(savedTime);
+            }
+            
+            if (isPlaying) {
+                audio.play();
+            }
+        });
+    </script>
+
+</body>
+</html>
